@@ -1,0 +1,23 @@
+<form ng-submit="login.autenticar()">
+  <fieldset>
+    <legend>Insira seus dados de acesso</legend>
+
+    <label>
+      Usuário:
+      <input type="text"
+        ng-model="login.usuario">
+    </label>
+
+    <label>
+      Senha:
+      <input type="password"
+        ng-model="login.senha">
+    </label>
+
+    <button type="submit"
+      ng-disabled="!login.usuario || !login.senha">
+      Autenticar
+    </button>
+
+  </fieldset>
+</form>

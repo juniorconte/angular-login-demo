@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo App</title>
+</head>
+<body ng-app="demoApp">
+
+  <div ng-controller="MainCtrl as main">
+    <button ng-if="main.possuiSessao()"
+      ng-click="main.encessarSessao()">
+      encerrar sessão
+    </button>
+
+    <div ng-view></div>
+  </div>
+
+  <script src="libs/angular.js"></script>
+  <script src="libs/angular-route.js"></script>
+  <script src="libs/angular-cookies.js"></script>
+
+  <script src="scripts/app.js"></script>
+
+  <script src="scripts/services/sessao.js"></script>
+
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/login.js"></script>
+  <script src="scripts/controllers/restrito.js"></script>
+
+</body>
+</html>
